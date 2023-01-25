@@ -1,0 +1,20 @@
+<ion-item>
+  <ion-thumbnail slot="start">
+    <img alt="{{producto.titulo}}" src="{{producto.foto}}" />
+  </ion-thumbnail>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+          <ion-label> {{producto.titulo}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col *ngIf="producto.valoracion>=4" >
+          <ion-badge color="success"  >{{producto.valoracion}}</ion-badge>
+      </ion-col>
+      <ion-col *ngIf="producto.valoracion<4" >
+          <ion-badge color="secondary"  >{{producto.valoracion}}</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ </ion-item>
